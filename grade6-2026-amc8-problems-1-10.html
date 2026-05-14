@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grade 6 AMC 8 Practice: Problems 1-10</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f7f8f5;
+      --paper: #ffffff;
+      --ink: #262b24;
+      --muted: #5d6659;
+      --line: #d9dfd1;
+      --accent: #79b84a;
+      --accent-dark: #4d8729;
+      --mark: #eef6e8;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    main {
+      width: min(100%, 980px);
+      margin: 0 auto;
+      padding: 28px 18px 48px;
+    }
+
+    header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 0 0 18px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 2vw, 2.05rem);
+      line-height: 1.2;
+      font-weight: 720;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .print-button {
+      appearance: none;
+      border: 1px solid #9dbd83;
+      background: #ffffff;
+      color: var(--accent-dark);
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 650;
+      padding: 9px 14px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .print-button:hover {
+      background: var(--mark);
+    }
+
+    .toc {
+      display: grid;
+      grid-template-columns: repeat(10, minmax(0, 1fr));
+      gap: 6px;
+      margin: 18px 0 20px;
+    }
+
+    .toc a {
+      display: block;
+      text-align: center;
+      padding: 7px 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--paper);
+      text-decoration: none;
+      font-weight: 650;
+    }
+
+    .toc a:hover {
+      border-color: #a9c88f;
+      background: var(--mark);
+    }
+
+    .worksheet {
+      display: grid;
+      gap: 16px;
+    }
+
+    .problem {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 20px;
+      break-inside: avoid;
+    }
+
+    .problem-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .number {
+      display: inline-grid;
+      place-items: center;
+      min-width: 34px;
+      height: 34px;
+      padding: 0 8px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #ffffff;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .source-link {
+      margin-left: auto;
+      color: var(--accent-dark);
+      font-size: 0.9rem;
+      font-weight: 650;
+      text-decoration: none;
+    }
+
+    .source-link:hover {
+      text-decoration: underline;
+    }
+
+    .solution-toggle {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 16px;
+      border: 1px solid #9dbd83;
+      background: #ffffff;
+      color: var(--accent-dark);
+      border-radius: 8px;
+      font: inherit;
+      font-weight: 650;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .solution-toggle:hover {
+      background: var(--mark);
+    }
+
+    .solution {
+      margin-top: 12px;
+      padding: 12px 14px;
+      border-left: 3px solid var(--accent);
+      background: var(--mark);
+      border-radius: 8px;
+    }
+
+    .solution[hidden] {
+      display: none;
+    }
+
+    .solution p:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0 0 12px;
+    }
+
+    .math {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .math-line {
+      margin: 18px 0;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+    }
+
+    .choices {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px 14px;
+      margin-top: 16px;
+    }
+
+    .choices.two-column {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .choice {
+      min-height: 38px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      background: #fbfcfa;
+    }
+
+    .choice b {
+      min-width: 1.25em;
+    }
+
+    .array {
+      margin: 10px auto 4px;
+      border-collapse: collapse;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+    }
+
+    .array td {
+      width: 30px;
+      height: 28px;
+      text-align: center;
+    }
+
+    .shape-list {
+      margin: 8px 0 16px 1.2rem;
+      padding: 0;
+    }
+
+    .shape-list li {
+      margin: 5px 0;
+    }
+
+    .fraction {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 1.1em;
+      vertical-align: middle;
+      line-height: 1;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .fraction .top {
+      border-bottom: 1px solid currentColor;
+      padding: 0 0.12em 0.08em;
+    }
+
+    .fraction .bottom {
+      padding: 0.08em 0.12em 0;
+    }
+
+    .radical-fraction {
+      width: max-content;
+      margin: 14px auto 6px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      text-align: center;
+      line-height: 1.25;
+    }
+
+    .radical-fraction .numerator {
+      border-bottom: 2px solid currentColor;
+      padding: 0 0.35em 0.12em;
+    }
+
+    .radical-fraction .denominator {
+      padding: 0.12em 0.35em 0;
+    }
+
+    .radicand {
+      display: inline-block;
+      border-top: 1.5px solid currentColor;
+      padding: 0 0.12em;
+    }
+
+    .radical {
+      display: inline-flex;
+      align-items: flex-start;
+      white-space: nowrap;
+    }
+
+    .radical-sign {
+      font-size: 1.25em;
+      line-height: 0.98;
+    }
+
+    .nested-radicand {
+      display: inline-block;
+      border-top: 1.5px solid currentColor;
+      padding: 0 0.14em 0.02em;
+    }
+
+    .field-figure {
+      width: min(100%, 520px);
+      display: block;
+      margin: 14px auto 8px;
+    }
+
+    .runner-list {
+      margin: 8px 0 14px;
+      padding-left: 1.2rem;
+    }
+
+    .runner-list li {
+      margin: 4px 0;
+    }
+
+    .work-space {
+      margin-top: 18px;
+      border-top: 1px dashed #cbd6c0;
+      height: 48px;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: var(--accent-dark);
+    }
+
+    @media (max-width: 760px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .toc {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .choices,
+      .choices.two-column {
+        grid-template-columns: 1fr;
+      }
+
+      .problem {
+        padding: 16px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      main {
+        width: 100%;
+        padding: 0;
+      }
+
+      header {
+        margin-bottom: 12px;
+      }
+
+      .print-button,
+      .solution-toggle,
+      .toc,
+      .source-link,
+      footer {
+        display: none;
+      }
+
+      .worksheet {
+        gap: 10px;
+      }
+
+      .problem {
+        border-color: #d7d7d7;
+        padding: 13px 14px;
+      }
+
+      .work-space {
+        height: 34px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Grade 6 AMC 8 Practice</h1>
+        <p class="subtitle">2026 AMC 8 Problems 1-10</p>
+      </div>
+      <button class="print-button" type="button" onclick="window.print()">Print</button>
+    </header>
+
+    <nav class="toc" aria-label="Problem navigation">
+      <a href="#problem-1">1</a>
+      <a href="#problem-2">2</a>
+      <a href="#problem-3">3</a>
+      <a href="#problem-4">4</a>
+      <a href="#problem-5">5</a>
+      <a href="#problem-6">6</a>
+      <a href="#problem-7">7</a>
+      <a href="#problem-8">8</a>
+      <a href="#problem-9">9</a>
+      <a href="#problem-10">10</a>
+    </nav>
+
+    <section class="worksheet" aria-label="Problems 1 through 10">
+      <article class="problem" id="problem-1">
+        <div class="problem-head">
+          <span class="number">1</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_1">AoPS source</a>
+        </div>
+        <p>What is the value of the following expression?</p>
+        <div class="math-line">1 + 2 - 3 + 4 + 5 - 6 + 7 + 8 - 9 + 10 + 11 - 12</div>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 18</div>
+          <div class="choice" role="listitem"><b>B.</b> 21</div>
+          <div class="choice" role="listitem"><b>C.</b> 24</div>
+          <div class="choice" role="listitem"><b>D.</b> 27</div>
+          <div class="choice" role="listitem"><b>E.</b> 30</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-1" data-solution-target="solution-1">Show solution</button>
+        <div class="solution" id="solution-1" hidden>
+          <p><strong>Answer: A.</strong></p>
+          <p>Group the expression in sets of three: <span class="math">(1 + 2 - 3) + (4 + 5 - 6) + (7 + 8 - 9) + (10 + 11 - 12)</span>.</p>
+          <p>The four groups are <span class="math">0, 3, 6,</span> and <span class="math">9</span>. Their sum is <span class="math">0 + 3 + 6 + 9 = 18</span>.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-2">
+        <div class="problem-head">
+          <span class="number">2</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_2">AoPS source</a>
+        </div>
+        <p>In the array shown below, three 3s are surrounded by 2s, which are in turn surrounded by a border of 1s. What is the sum of the numbers in the array?</p>
+        <table class="array" aria-label="Array of ones, twos, and threes">
+          <tbody>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+            <tr><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>3</td><td>3</td><td>2</td><td>1</td></tr>
+            <tr><td>1</td><td>2</td><td>2</td><td>2</td><td>2</td><td>2</td><td>1</td></tr>
+            <tr><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+          </tbody>
+        </table>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 49</div>
+          <div class="choice" role="listitem"><b>B.</b> 51</div>
+          <div class="choice" role="listitem"><b>C.</b> 53</div>
+          <div class="choice" role="listitem"><b>D.</b> 55</div>
+          <div class="choice" role="listitem"><b>E.</b> 57</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-2" data-solution-target="solution-2">Show solution</button>
+        <div class="solution" id="solution-2" hidden>
+          <p><strong>Answer: C.</strong></p>
+          <p>Count each kind of number. The border has 20 ones. The ring around the 3s has 12 twos. The middle has 3 threes.</p>
+          <p>The total is <span class="math">20(1) + 12(2) + 3(3) = 20 + 24 + 9 = 53</span>.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-3">
+        <div class="problem-head">
+          <span class="number">3</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_3">AoPS source</a>
+        </div>
+        <p>Haruki has a piece of wire that is 24 centimeters long. He wants to bend it to form each of the following shapes, one at a time.</p>
+        <ul class="shape-list">
+          <li>A regular hexagon with side length 5 cm.</li>
+          <li>A square of area 36 cm<sup>2</sup>.</li>
+          <li>A right triangle whose legs are 6 and 8 cm long.</li>
+        </ul>
+        <p>Which of the shapes can Haruki make?</p>
+        <div class="choices two-column" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> Triangle only</div>
+          <div class="choice" role="listitem"><b>B.</b> Hexagon and square only</div>
+          <div class="choice" role="listitem"><b>C.</b> Hexagon and triangle only</div>
+          <div class="choice" role="listitem"><b>D.</b> Square and triangle only</div>
+          <div class="choice" role="listitem"><b>E.</b> Hexagon, triangle, and square</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-3" data-solution-target="solution-3">Show solution</button>
+        <div class="solution" id="solution-3" hidden>
+          <p><strong>Answer: D.</strong></p>
+          <p>A regular hexagon would need <span class="math">6 x 5 = 30</span> cm of wire, so it is too long.</p>
+          <p>The square has side length <span class="math">6</span> cm because its area is <span class="math">36</span> cm<sup>2</sup>, so its perimeter is <span class="math">4 x 6 = 24</span> cm.</p>
+          <p>The right triangle has hypotenuse <span class="math">10</span> cm, so its perimeter is <span class="math">6 + 8 + 10 = 24</span> cm. Haruki can make the square and triangle.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-4">
+        <div class="problem-head">
+          <span class="number">4</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_4">AoPS source</a>
+        </div>
+        <p>Brynn's savings decreased by 20% in July, then increased by 50% in August. Brynn's savings are now what percent of the original amount?</p>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 80</div>
+          <div class="choice" role="listitem"><b>B.</b> 90</div>
+          <div class="choice" role="listitem"><b>C.</b> 100</div>
+          <div class="choice" role="listitem"><b>D.</b> 110</div>
+          <div class="choice" role="listitem"><b>E.</b> 120</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-4" data-solution-target="solution-4">Show solution</button>
+        <div class="solution" id="solution-4" hidden>
+          <p><strong>Answer: E.</strong></p>
+          <p>Use 100 as the original amount. After a 20% decrease, the savings are <span class="math">80</span>.</p>
+          <p>A 50% increase from <span class="math">80</span> adds <span class="math">40</span>, giving <span class="math">120</span>. That is 120% of the original amount.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-5">
+        <div class="problem-head">
+          <span class="number">5</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_5">AoPS source</a>
+        </div>
+        <p>Casey went on a road trip that covered 100 miles, stopping only for a lunch break along the way. The trip took 3 hours in total and her average speed while driving was 40 miles per hour. In minutes, how long was the lunch break?</p>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 15</div>
+          <div class="choice" role="listitem"><b>B.</b> 30</div>
+          <div class="choice" role="listitem"><b>C.</b> 40</div>
+          <div class="choice" role="listitem"><b>D.</b> 45</div>
+          <div class="choice" role="listitem"><b>E.</b> 60</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-5" data-solution-target="solution-5">Show solution</button>
+        <div class="solution" id="solution-5" hidden>
+          <p><strong>Answer: B.</strong></p>
+          <p>Driving 100 miles at 40 miles per hour takes <span class="math">100 / 40 = 2.5</span> hours.</p>
+          <p>The whole trip took 3 hours, so the lunch break was <span class="math">3 - 2.5 = 0.5</span> hours, which is 30 minutes.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-6">
+        <div class="problem-head">
+          <span class="number">6</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_6">AoPS source</a>
+        </div>
+        <p>Peter lives near a rectangular field that is filled with blackberry bushes. The field is 10 meters long and 8 meters wide, and Peter can reach any blackberries that are within 1 meter of an edge of the field. The portion of the field he can reach is shaded in the figure below. What fraction of the area of the field can Peter reach?</p>
+        <svg class="field-figure" viewBox="0 0 520 285" role="img" aria-label="A 10 meter by 8 meter rectangle with a shaded 1 meter border">
+          <defs>
+            <marker id="arrow" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#4a4a4a"></path>
+            </marker>
+          </defs>
+          <rect x="105" y="42" width="320" height="210" fill="#d9d9d9" stroke="#3f3f3f" stroke-width="2"></rect>
+          <rect x="125" y="72" width="280" height="150" fill="#ffffff" stroke="#3f3f3f" stroke-width="2"></rect>
+          <line x1="105" y1="270" x2="425" y2="270" stroke="#4a4a4a" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"></line>
+          <text x="265" y="282" text-anchor="middle" font-size="18" fill="#262b24">10 m</text>
+          <line x1="72" y1="42" x2="72" y2="252" stroke="#4a4a4a" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"></line>
+          <text x="56" y="151" text-anchor="middle" font-size="18" fill="#262b24" transform="rotate(-90 56 151)">8 m</text>
+          <line x1="445" y1="222" x2="445" y2="252" stroke="#4a4a4a" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"></line>
+          <text x="459" y="243" font-size="18" fill="#262b24">1 m</text>
+        </svg>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> <span class="fraction"><span class="top">1</span><span class="bottom">6</span></span></div>
+          <div class="choice" role="listitem"><b>B.</b> <span class="fraction"><span class="top">1</span><span class="bottom">4</span></span></div>
+          <div class="choice" role="listitem"><b>C.</b> <span class="fraction"><span class="top">1</span><span class="bottom">3</span></span></div>
+          <div class="choice" role="listitem"><b>D.</b> <span class="fraction"><span class="top">3</span><span class="bottom">8</span></span></div>
+          <div class="choice" role="listitem"><b>E.</b> <span class="fraction"><span class="top">2</span><span class="bottom">5</span></span></div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-6" data-solution-target="solution-6">Show solution</button>
+        <div class="solution" id="solution-6" hidden>
+          <p><strong>Answer: E.</strong></p>
+          <p>The whole field has area <span class="math">10 x 8 = 80</span> square meters.</p>
+          <p>The unreachable middle is smaller by 1 meter on every side, so it is <span class="math">8</span> meters by <span class="math">6</span> meters. Its area is <span class="math">48</span>.</p>
+          <p>The reachable border has area <span class="math">80 - 48 = 32</span>, so the fraction is <span class="math">32 / 80 = 2 / 5</span>.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-7">
+        <div class="problem-head">
+          <span class="number">7</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_7">AoPS source</a>
+        </div>
+        <p>Mika would like to estimate how far she can ride a new model of electric bike on a fully charged battery. She completed two trips totaling 40 miles. The first trip used <span class="fraction"><span class="top">1</span><span class="bottom">2</span></span> of the total battery power, while the second trip used <span class="fraction"><span class="top">3</span><span class="bottom">10</span></span> of the total battery power. How many miles can this electric bike go on a fully charged battery?</p>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 45</div>
+          <div class="choice" role="listitem"><b>B.</b> 48</div>
+          <div class="choice" role="listitem"><b>C.</b> 50</div>
+          <div class="choice" role="listitem"><b>D.</b> 52</div>
+          <div class="choice" role="listitem"><b>E.</b> 55</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-7" data-solution-target="solution-7">Show solution</button>
+        <div class="solution" id="solution-7" hidden>
+          <p><strong>Answer: C.</strong></p>
+          <p>The two trips used <span class="math">1/2 + 3/10 = 5/10 + 3/10 = 8/10 = 4/5</span> of the battery.</p>
+          <p>If <span class="math">4/5</span> of a charge gives 40 miles, then a full charge gives <span class="math">40 / (4/5) = 40 x 5/4 = 50</span> miles.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-8">
+        <div class="problem-head">
+          <span class="number">8</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_8">AoPS source</a>
+        </div>
+        <p>A poll asked a number of people if they liked solving mathematics problems. Exactly 74% answered "yes." What is the fewest possible number of people who could have been asked the question?</p>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> 10</div>
+          <div class="choice" role="listitem"><b>B.</b> 20</div>
+          <div class="choice" role="listitem"><b>C.</b> 25</div>
+          <div class="choice" role="listitem"><b>D.</b> 50</div>
+          <div class="choice" role="listitem"><b>E.</b> 100</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-8" data-solution-target="solution-8">Show solution</button>
+        <div class="solution" id="solution-8" hidden>
+          <p><strong>Answer: D.</strong></p>
+          <p>Write the percent as a fraction: <span class="math">74% = 74/100 = 37/50</span>.</p>
+          <p>The number of people must make the number of "yes" answers a whole number. The smallest denominator that works is 50, with 37 "yes" answers.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-9">
+        <div class="problem-head">
+          <span class="number">9</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_9">AoPS source</a>
+        </div>
+        <p>What is the value of this expression?</p>
+        <div class="radical-fraction" aria-label="sqrt(16 sqrt(81)) / sqrt(81 sqrt(16))">
+          <div class="numerator"><span class="radical"><span class="radical-sign">&radic;</span><span class="nested-radicand">16&radic;<span class="radicand">81</span></span></span></div>
+          <div class="denominator"><span class="radical"><span class="radical-sign">&radic;</span><span class="nested-radicand">81&radic;<span class="radicand">16</span></span></span></div>
+        </div>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> <span class="fraction"><span class="top">4</span><span class="bottom">9</span></span></div>
+          <div class="choice" role="listitem"><b>B.</b> <span class="fraction"><span class="top">2</span><span class="bottom">3</span></span></div>
+          <div class="choice" role="listitem"><b>C.</b> 1</div>
+          <div class="choice" role="listitem"><b>D.</b> <span class="fraction"><span class="top">3</span><span class="bottom">2</span></span></div>
+          <div class="choice" role="listitem"><b>E.</b> <span class="fraction"><span class="top">9</span><span class="bottom">4</span></span></div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-9" data-solution-target="solution-9">Show solution</button>
+        <div class="solution" id="solution-9" hidden>
+          <p><strong>Answer: B.</strong></p>
+          <p>The numerator is <span class="math">sqrt(16 sqrt(81)) = sqrt(16 x 9) = sqrt(144) = 12</span>.</p>
+          <p>The denominator is <span class="math">sqrt(81 sqrt(16)) = sqrt(81 x 4) = sqrt(324) = 18</span>.</p>
+          <p>The value is <span class="math">12 / 18 = 2 / 3</span>.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+
+      <article class="problem" id="problem-10">
+        <div class="problem-head">
+          <span class="number">10</span>
+          <a class="source-link" href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_10">AoPS source</a>
+        </div>
+        <p>Five runners completed the grueling Xmarathon: Luke, Melina, Nico, Olympia, and Pedro.</p>
+        <ul class="runner-list">
+          <li>Nico finished 11 minutes behind Pedro.</li>
+          <li>Olympia finished 2 minutes ahead of Melina, but 3 minutes behind Pedro.</li>
+          <li>Olympia finished 6 minutes ahead of Luke.</li>
+        </ul>
+        <p>Which runner finished fourth?</p>
+        <div class="choices" role="list" aria-label="Answer choices">
+          <div class="choice" role="listitem"><b>A.</b> Luke</div>
+          <div class="choice" role="listitem"><b>B.</b> Melina</div>
+          <div class="choice" role="listitem"><b>C.</b> Nico</div>
+          <div class="choice" role="listitem"><b>D.</b> Olympia</div>
+          <div class="choice" role="listitem"><b>E.</b> Pedro</div>
+        </div>
+        <button class="solution-toggle" type="button" aria-expanded="false" aria-controls="solution-10" data-solution-target="solution-10">Show solution</button>
+        <div class="solution" id="solution-10" hidden>
+          <p><strong>Answer: A.</strong></p>
+          <p>Use Pedro's finish time as the reference. Olympia was 3 minutes behind Pedro, so Olympia is second.</p>
+          <p>Melina was 2 minutes behind Olympia, so Melina was 5 minutes behind Pedro. Luke was 6 minutes behind Olympia, so Luke was 9 minutes behind Pedro. Nico was 11 minutes behind Pedro.</p>
+          <p>The order is Pedro, Olympia, Melina, Luke, Nico. The fourth runner was Luke.</p>
+        </div>
+        <div class="work-space" aria-hidden="true"></div>
+      </article>
+    </section>
+
+    <footer>
+      <p>Problem source links point to the AoPS Wiki pages for the 2026 AMC 8 Problems 1-10. Local reference file used: <code>2026-AMC-8-Exam.pdf</code>.</p>
+    </footer>
+  </main>
+  <script>
+    document.querySelectorAll(".solution-toggle").forEach((button) => {
+      button.addEventListener("click", () => {
+        const panel = document.getElementById(button.dataset.solutionTarget);
+        const isOpen = button.getAttribute("aria-expanded") === "true";
+
+        button.setAttribute("aria-expanded", String(!isOpen));
+        button.textContent = isOpen ? "Show solution" : "Hide solution";
+        panel.hidden = isOpen;
+      });
+    });
+  </script>
+</body>
+</html>

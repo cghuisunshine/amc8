@@ -1,0 +1,360 @@
+- main [ref=e2]:
+  - generic [ref=e3]:
+    - generic [ref=e4]:
+      - heading "Grade 6 AMC 8 Practice" [level=1] [ref=e5]
+      - paragraph [ref=e6]: 2026 AMC 8 Problems 1-10
+    - button "Print" [ref=e7] [cursor=pointer]
+  - navigation "Problem navigation" [ref=e8]:
+    - link "1" [ref=e9] [cursor=pointer]:
+      - /url: "#problem-1"
+    - link "2" [ref=e10] [cursor=pointer]:
+      - /url: "#problem-2"
+    - link "3" [ref=e11] [cursor=pointer]:
+      - /url: "#problem-3"
+    - link "4" [ref=e12] [cursor=pointer]:
+      - /url: "#problem-4"
+    - link "5" [ref=e13] [cursor=pointer]:
+      - /url: "#problem-5"
+    - link "6" [ref=e14] [cursor=pointer]:
+      - /url: "#problem-6"
+    - link "7" [ref=e15] [cursor=pointer]:
+      - /url: "#problem-7"
+    - link "8" [ref=e16] [cursor=pointer]:
+      - /url: "#problem-8"
+    - link "9" [ref=e17] [cursor=pointer]:
+      - /url: "#problem-9"
+    - link "10" [ref=e18] [cursor=pointer]:
+      - /url: "#problem-10"
+  - region "Problems 1 through 10" [ref=e19]:
+    - article [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: "1"
+        - link "AoPS source" [ref=e23] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_1
+      - paragraph [ref=e24]: What is the value of the following expression?
+      - generic [ref=e25]: 1 + 2 - 3 + 4 + 5 - 6 + 7 + 8 - 9 + 10 + 11 - 12
+      - list "Answer choices" [ref=e26]:
+        - listitem [ref=e27]:
+          - generic [ref=e28]: A.
+          - text: "18"
+        - listitem [ref=e29]:
+          - generic [ref=e30]: B.
+          - text: "21"
+        - listitem [ref=e31]:
+          - generic [ref=e32]: C.
+          - text: "24"
+        - listitem [ref=e33]:
+          - generic [ref=e34]: D.
+          - text: "27"
+        - listitem [ref=e35]:
+          - generic [ref=e36]: E.
+          - text: "30"
+      - button "Show solution" [active] [ref=e313] [cursor=pointer]
+    - article [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: "2"
+        - link "AoPS source" [ref=e42] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_2
+      - paragraph [ref=e43]: In the array shown below, three 3s are surrounded by 2s, which are in turn surrounded by a border of 1s. What is the sum of the numbers in the array?
+      - table "Array of ones, twos, and threes" [ref=e44]:
+        - rowgroup [ref=e45]:
+          - row "1 1 1 1 1 1 1" [ref=e46]:
+            - cell "1" [ref=e47]
+            - cell "1" [ref=e48]
+            - cell "1" [ref=e49]
+            - cell "1" [ref=e50]
+            - cell "1" [ref=e51]
+            - cell "1" [ref=e52]
+            - cell "1" [ref=e53]
+          - row "1 2 2 2 2 2 1" [ref=e54]:
+            - cell "1" [ref=e55]
+            - cell "2" [ref=e56]
+            - cell "2" [ref=e57]
+            - cell "2" [ref=e58]
+            - cell "2" [ref=e59]
+            - cell "2" [ref=e60]
+            - cell "1" [ref=e61]
+          - row "1 2 3 3 3 2 1" [ref=e62]:
+            - cell "1" [ref=e63]
+            - cell "2" [ref=e64]
+            - cell "3" [ref=e65]
+            - cell "3" [ref=e66]
+            - cell "3" [ref=e67]
+            - cell "2" [ref=e68]
+            - cell "1" [ref=e69]
+          - row "1 2 2 2 2 2 1" [ref=e70]:
+            - cell "1" [ref=e71]
+            - cell "2" [ref=e72]
+            - cell "2" [ref=e73]
+            - cell "2" [ref=e74]
+            - cell "2" [ref=e75]
+            - cell "2" [ref=e76]
+            - cell "1" [ref=e77]
+          - row "1 1 1 1 1 1 1" [ref=e78]:
+            - cell "1" [ref=e79]
+            - cell "1" [ref=e80]
+            - cell "1" [ref=e81]
+            - cell "1" [ref=e82]
+            - cell "1" [ref=e83]
+            - cell "1" [ref=e84]
+            - cell "1" [ref=e85]
+      - list "Answer choices" [ref=e86]:
+        - listitem [ref=e87]:
+          - generic [ref=e88]: A.
+          - text: "49"
+        - listitem [ref=e89]:
+          - generic [ref=e90]: B.
+          - text: "51"
+        - listitem [ref=e91]:
+          - generic [ref=e92]: C.
+          - text: "53"
+        - listitem [ref=e93]:
+          - generic [ref=e94]: D.
+          - text: "55"
+        - listitem [ref=e95]:
+          - generic [ref=e96]: E.
+          - text: "57"
+      - button "Show solution" [ref=e97] [cursor=pointer]
+    - article [ref=e99]:
+      - generic [ref=e100]:
+        - generic [ref=e101]: "3"
+        - link "AoPS source" [ref=e102] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_3
+      - paragraph [ref=e103]: Haruki has a piece of wire that is 24 centimeters long. He wants to bend it to form each of the following shapes, one at a time.
+      - list [ref=e104]:
+        - listitem [ref=e105]: A regular hexagon with side length 5 cm.
+        - listitem [ref=e106]:
+          - text: A square of area 36 cm
+          - superscript [ref=e107]: "2"
+          - text: .
+        - listitem [ref=e108]: A right triangle whose legs are 6 and 8 cm long.
+      - paragraph [ref=e109]: Which of the shapes can Haruki make?
+      - list "Answer choices" [ref=e110]:
+        - listitem [ref=e111]:
+          - generic [ref=e112]: A.
+          - text: Triangle only
+        - listitem [ref=e113]:
+          - generic [ref=e114]: B.
+          - text: Hexagon and square only
+        - listitem [ref=e115]:
+          - generic [ref=e116]: C.
+          - text: Hexagon and triangle only
+        - listitem [ref=e117]:
+          - generic [ref=e118]: D.
+          - text: Square and triangle only
+        - listitem [ref=e119]:
+          - generic [ref=e120]: E.
+          - text: Hexagon, triangle, and square
+      - button "Show solution" [ref=e121] [cursor=pointer]
+    - article [ref=e123]:
+      - generic [ref=e124]:
+        - generic [ref=e125]: "4"
+        - link "AoPS source" [ref=e126] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_4
+      - paragraph [ref=e127]: Brynn's savings decreased by 20% in July, then increased by 50% in August. Brynn's savings are now what percent of the original amount?
+      - list "Answer choices" [ref=e128]:
+        - listitem [ref=e129]:
+          - generic [ref=e130]: A.
+          - text: "80"
+        - listitem [ref=e131]:
+          - generic [ref=e132]: B.
+          - text: "90"
+        - listitem [ref=e133]:
+          - generic [ref=e134]: C.
+          - text: "100"
+        - listitem [ref=e135]:
+          - generic [ref=e136]: D.
+          - text: "110"
+        - listitem [ref=e137]:
+          - generic [ref=e138]: E.
+          - text: "120"
+      - button "Show solution" [ref=e139] [cursor=pointer]
+    - article [ref=e141]:
+      - generic [ref=e142]:
+        - generic [ref=e143]: "5"
+        - link "AoPS source" [ref=e144] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_5
+      - paragraph [ref=e145]: Casey went on a road trip that covered 100 miles, stopping only for a lunch break along the way. The trip took 3 hours in total and her average speed while driving was 40 miles per hour. In minutes, how long was the lunch break?
+      - list "Answer choices" [ref=e146]:
+        - listitem [ref=e147]:
+          - generic [ref=e148]: A.
+          - text: "15"
+        - listitem [ref=e149]:
+          - generic [ref=e150]: B.
+          - text: "30"
+        - listitem [ref=e151]:
+          - generic [ref=e152]: C.
+          - text: "40"
+        - listitem [ref=e153]:
+          - generic [ref=e154]: D.
+          - text: "45"
+        - listitem [ref=e155]:
+          - generic [ref=e156]: E.
+          - text: "60"
+      - button "Show solution" [ref=e157] [cursor=pointer]
+    - article [ref=e159]:
+      - generic [ref=e160]:
+        - generic [ref=e161]: "6"
+        - link "AoPS source" [ref=e162] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_6
+      - paragraph [ref=e163]: Peter lives near a rectangular field that is filled with blackberry bushes. The field is 10 meters long and 8 meters wide, and Peter can reach any blackberries that are within 1 meter of an edge of the field. The portion of the field he can reach is shaded in the figure below. What fraction of the area of the field can Peter reach?
+      - img "A 10 meter by 8 meter rectangle with a shaded 1 meter border" [ref=e164]:
+        - generic [ref=e167]: 10 m
+        - generic [ref=e168]: 8 m
+        - generic [ref=e169]: 1 m
+      - list "Answer choices" [ref=e170]:
+        - listitem [ref=e171]:
+          - generic [ref=e172]: A.
+          - generic [ref=e173]:
+            - generic [ref=e174]: "1"
+            - generic [ref=e175]: "6"
+        - listitem [ref=e176]:
+          - generic [ref=e177]: B.
+          - generic [ref=e178]:
+            - generic [ref=e179]: "1"
+            - generic [ref=e180]: "4"
+        - listitem [ref=e181]:
+          - generic [ref=e182]: C.
+          - generic [ref=e183]:
+            - generic [ref=e184]: "1"
+            - generic [ref=e185]: "3"
+        - listitem [ref=e186]:
+          - generic [ref=e187]: D.
+          - generic [ref=e188]:
+            - generic [ref=e189]: "3"
+            - generic [ref=e190]: "8"
+        - listitem [ref=e191]:
+          - generic [ref=e192]: E.
+          - generic [ref=e193]:
+            - generic [ref=e194]: "2"
+            - generic [ref=e195]: "5"
+      - button "Show solution" [ref=e196] [cursor=pointer]
+    - article [ref=e198]:
+      - generic [ref=e199]:
+        - generic [ref=e200]: "7"
+        - link "AoPS source" [ref=e201] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_7
+      - paragraph [ref=e202]:
+        - text: Mika would like to estimate how far she can ride a new model of electric bike on a fully charged battery. She completed two trips totaling 40 miles. The first trip used
+        - generic [ref=e203]:
+          - generic [ref=e204]: "1"
+          - generic [ref=e205]: "2"
+        - text: of the total battery power, while the second trip used
+        - generic [ref=e206]:
+          - generic [ref=e207]: "3"
+          - generic [ref=e208]: "10"
+        - text: of the total battery power. How many miles can this electric bike go on a fully charged battery?
+      - list "Answer choices" [ref=e209]:
+        - listitem [ref=e210]:
+          - generic [ref=e211]: A.
+          - text: "45"
+        - listitem [ref=e212]:
+          - generic [ref=e213]: B.
+          - text: "48"
+        - listitem [ref=e214]:
+          - generic [ref=e215]: C.
+          - text: "50"
+        - listitem [ref=e216]:
+          - generic [ref=e217]: D.
+          - text: "52"
+        - listitem [ref=e218]:
+          - generic [ref=e219]: E.
+          - text: "55"
+      - button "Show solution" [ref=e220] [cursor=pointer]
+    - article [ref=e222]:
+      - generic [ref=e223]:
+        - generic [ref=e224]: "8"
+        - link "AoPS source" [ref=e225] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_8
+      - paragraph [ref=e226]: A poll asked a number of people if they liked solving mathematics problems. Exactly 74% answered "yes." What is the fewest possible number of people who could have been asked the question?
+      - list "Answer choices" [ref=e227]:
+        - listitem [ref=e228]:
+          - generic [ref=e229]: A.
+          - text: "10"
+        - listitem [ref=e230]:
+          - generic [ref=e231]: B.
+          - text: "20"
+        - listitem [ref=e232]:
+          - generic [ref=e233]: C.
+          - text: "25"
+        - listitem [ref=e234]:
+          - generic [ref=e235]: D.
+          - text: "50"
+        - listitem [ref=e236]:
+          - generic [ref=e237]: E.
+          - text: "100"
+      - button "Show solution" [ref=e238] [cursor=pointer]
+    - article [ref=e240]:
+      - generic [ref=e241]:
+        - generic [ref=e242]: "9"
+        - link "AoPS source" [ref=e243] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_9
+      - paragraph [ref=e244]: What is the value of this expression?
+      - generic "sqrt(16 sqrt(81)) / sqrt(81 sqrt(16))" [ref=e245]:
+        - generic [ref=e247]:
+          - generic [ref=e248]: √
+          - generic [ref=e249]:
+            - text: 16√
+            - generic [ref=e250]: "81"
+        - generic [ref=e252]:
+          - generic [ref=e253]: √
+          - generic [ref=e254]:
+            - text: 81√
+            - generic [ref=e255]: "16"
+      - list "Answer choices" [ref=e256]:
+        - listitem [ref=e257]:
+          - generic [ref=e258]: A.
+          - generic [ref=e259]:
+            - generic [ref=e260]: "4"
+            - generic [ref=e261]: "9"
+        - listitem [ref=e262]:
+          - generic [ref=e263]: B.
+          - generic [ref=e264]:
+            - generic [ref=e265]: "2"
+            - generic [ref=e266]: "3"
+        - listitem [ref=e267]:
+          - generic [ref=e268]: C.
+          - text: "1"
+        - listitem [ref=e269]:
+          - generic [ref=e270]: D.
+          - generic [ref=e271]:
+            - generic [ref=e272]: "3"
+            - generic [ref=e273]: "2"
+        - listitem [ref=e274]:
+          - generic [ref=e275]: E.
+          - generic [ref=e276]:
+            - generic [ref=e277]: "9"
+            - generic [ref=e278]: "4"
+      - button "Show solution" [ref=e279] [cursor=pointer]
+    - article [ref=e281]:
+      - generic [ref=e282]:
+        - generic [ref=e283]: "10"
+        - link "AoPS source" [ref=e284] [cursor=pointer]:
+          - /url: https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_10
+      - paragraph [ref=e285]: "Five runners completed the grueling Xmarathon: Luke, Melina, Nico, Olympia, and Pedro."
+      - list [ref=e286]:
+        - listitem [ref=e287]: Nico finished 11 minutes behind Pedro.
+        - listitem [ref=e288]: Olympia finished 2 minutes ahead of Melina, but 3 minutes behind Pedro.
+        - listitem [ref=e289]: Olympia finished 6 minutes ahead of Luke.
+      - paragraph [ref=e290]: Which runner finished fourth?
+      - list "Answer choices" [ref=e291]:
+        - listitem [ref=e292]:
+          - generic [ref=e293]: A.
+          - text: Luke
+        - listitem [ref=e294]:
+          - generic [ref=e295]: B.
+          - text: Melina
+        - listitem [ref=e296]:
+          - generic [ref=e297]: C.
+          - text: Nico
+        - listitem [ref=e298]:
+          - generic [ref=e299]: D.
+          - text: Olympia
+        - listitem [ref=e300]:
+          - generic [ref=e301]: E.
+          - text: Pedro
+      - button "Show solution" [ref=e302] [cursor=pointer]
+  - paragraph [ref=e305]:
+    - text: "Problem source links point to the AoPS Wiki pages for the 2026 AMC 8 Problems 1-10. Local reference file used:"
+    - code [ref=e306]: 2026-AMC-8-Exam.pdf
+    - text: .
