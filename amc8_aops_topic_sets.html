@@ -16,9 +16,17 @@ h2{font-size:21px;margin:0}
 .filter-btn:hover:not(:disabled){background:#f4f4f5}
 .filter-btn.active{background:#24292f;border-color:#24292f;color:#fff}
 .filter-btn:disabled{color:#9ca3af;background:#f3f4f6;cursor:not-allowed}
+.topic-overview{display:flex;align-items:center;gap:18px;margin:18px 0 6px;padding:14px 0;border-bottom:1px solid #e5e7eb}
+.topic-pie{width:132px;height:132px;flex:0 0 auto}
+.topic-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 16px;flex:1;margin:0;padding:0;list-style:none}
+.topic-legend li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;align-items:center;gap:8px;margin:0;font-size:13px}
+.topic-swatch{width:10px;height:10px;border-radius:2px}
+.topic-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.topic-share{color:#4b5563;font-variant-numeric:tabular-nums}
 .grid{columns:2 360px;margin-top:0}
 li{break-inside:avoid;margin:3px 0}
-li.hidden {display:none}
+li.hidden{display:none}
+@media (max-width:640px){.topic-overview{align-items:flex-start}.topic-pie{width:108px;height:108px}.topic-legend{grid-template-columns:1fr}}
 </style>
 </head><body>
 <h1>AMC 8 / AJHSME categorized question sets</h1>
@@ -32,7 +40,11 @@ li.hidden {display:none}
 <button type="button" class="filter-btn" data-page-filter="AJHSME">AJHSME</button>
 </div>
 </div>
-<section class="topic-section" data-topic-section>
+<div class="topic-overview" aria-label="Topic percentage chart">
+<svg class="topic-pie" data-topic-pie viewBox="0 0 120 120" role="img" aria-label="Topic percentages"></svg>
+<ul class="topic-legend" data-topic-legend></ul>
+</div>
+<section class="topic-section" data-topic-section data-topic="3D Geometry Problems">
 <div class="topic-header">
 <h2>3D Geometry Problems <span class="count" data-count>(1)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -42,7 +54,7 @@ li.hidden {display:none}
 </div></div><ol class="grid">
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2018_AMC_8_Problems/Problem_24">2018 AMC 8 Problem 24</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Algebra Problems">
 <div class="topic-header">
 <h2>Introductory Algebra Problems <span class="count" data-count>(504)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -555,7 +567,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_14">2026 AMC 8 Problem 14</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_19">2026 AMC 8 Problem 19</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Combinatorics Problems">
 <div class="topic-header">
 <h2>Introductory Combinatorics Problems <span class="count" data-count>(123)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -687,7 +699,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_21">2026 AMC 8 Problem 21</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_25">2026 AMC 8 Problem 25</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Geometry Problems">
 <div class="topic-header">
 <h2>Introductory Geometry Problems <span class="count" data-count>(266)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -962,7 +974,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_15">2026 AMC 8 Problem 15</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_23">2026 AMC 8 Problem 23</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Logic Problems">
 <div class="topic-header">
 <h2>Introductory Logic Problems <span class="count" data-count>(5)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -976,7 +988,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_8_Problems/Problem_6">2020 AMC 8 Problem 6</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2020_AMC_8_Problems/Problem_9">2020 AMC 8 Problem 9</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Number Theory Problems">
 <div class="topic-header">
 <h2>Introductory Number Theory Problems <span class="count" data-count>(113)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -1098,7 +1110,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_22">2026 AMC 8 Problem 22</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2026_AMC_8_Problems/Problem_24">2026 AMC 8 Problem 24</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Introductory Probability Problems">
 <div class="topic-header">
 <h2>Introductory Probability Problems <span class="count" data-count>(9)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -1116,7 +1128,7 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2022_AMC_8_Problems/Problem_12">2022 AMC 8 Problem 12</a></li>
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2023_AMC_8_Problems/Problem_23">2023 AMC 8 Problem 23</a></li>
 </ol></section>
-<section class="topic-section" data-topic-section>
+<section class="topic-section" data-topic-section data-topic="Logic Problems">
 <div class="topic-header">
 <h2>Logic Problems <span class="count" data-count>(4)</span></h2>
 <div class="filter-controls" aria-label="Contest filter">
@@ -1130,6 +1142,17 @@ li.hidden {display:none}
 <li data-contest="AMC 8"><a href="https://artofproblemsolving.com/wiki/index.php?title=2001_AMC_8_Problems/Problem_20">2001 AMC 8 Problem 20</a></li>
 </ol></section>
 <script>
+const topicColors = [
+  "#2563eb",
+  "#059669",
+  "#d97706",
+  "#7c3aed",
+  "#dc2626",
+  "#0891b2",
+  "#4b5563",
+  "#be123c"
+];
+
 function applyContestFilter(section, value) {
   const items = section.querySelectorAll("[data-contest]");
   let visible = 0;
@@ -1140,6 +1163,84 @@ function applyContestFilter(section, value) {
   });
   const count = section.querySelector("[data-count]");
   if (count) count.textContent = `(${visible})`;
+}
+
+function getTopicDistribution(value) {
+  return Array.from(document.querySelectorAll("[data-topic-section]"))
+    .map((section) => {
+      const topic = section.dataset.topic || "Untitled topic";
+      const count = Array.from(section.querySelectorAll("[data-contest]"))
+        .filter((item) => value === "all" || item.dataset.contest === value)
+        .length;
+      return { topic, count };
+    })
+    .filter((entry) => entry.count > 0);
+}
+
+function svgElement(name) {
+  return document.createElementNS("http://www.w3.org/2000/svg", name);
+}
+
+function slicePoint(cx, cy, radius, percent) {
+  const radians = (percent * 360 - 90) * Math.PI / 180;
+  return {
+    x: cx + radius * Math.cos(radians),
+    y: cy + radius * Math.sin(radians)
+  };
+}
+
+function describeSlice(cx, cy, radius, startPercent, endPercent) {
+  const start = slicePoint(cx, cy, radius, startPercent);
+  const end = slicePoint(cx, cy, radius, endPercent);
+  const largeArc = endPercent - startPercent > 0.5 ? 1 : 0;
+  return `M ${cx} ${cy} L ${start.x.toFixed(3)} ${start.y.toFixed(3)} A ${radius} ${radius} 0 ${largeArc} 1 ${end.x.toFixed(3)} ${end.y.toFixed(3)} Z`;
+}
+
+function renderTopicPie(value) {
+  const pie = document.querySelector("[data-topic-pie]");
+  const legend = document.querySelector("[data-topic-legend]");
+  if (!pie || !legend) return;
+
+  const distribution = getTopicDistribution(value);
+  const total = distribution.reduce((sum, entry) => sum + entry.count, 0);
+  pie.replaceChildren();
+  legend.replaceChildren();
+
+  if (!total) return;
+
+  let offset = 0;
+  distribution.forEach((entry, index) => {
+    const color = topicColors[index % topicColors.length];
+    const percentage = entry.count / total * 100;
+    const slice = percentage >= 99.95 ? svgElement("circle") : svgElement("path");
+
+    if (slice.tagName === "circle") {
+      slice.setAttribute("cx", "60");
+      slice.setAttribute("cy", "60");
+      slice.setAttribute("r", "48");
+    } else {
+      slice.setAttribute("d", describeSlice(60, 60, 48, offset / 100, (offset + percentage) / 100));
+    }
+    slice.setAttribute("fill", color);
+    slice.setAttribute("stroke", "#ffffff");
+    slice.setAttribute("stroke-width", "1");
+    pie.appendChild(slice);
+
+    const row = document.createElement("li");
+    const swatch = document.createElement("span");
+    const name = document.createElement("span");
+    const share = document.createElement("span");
+    swatch.className = "topic-swatch";
+    swatch.style.backgroundColor = color;
+    name.className = "topic-name";
+    name.textContent = entry.topic;
+    share.className = "topic-share";
+    share.textContent = `${entry.count} (${percentage.toFixed(1)}%)`;
+    row.append(swatch, name, share);
+    legend.appendChild(row);
+
+    offset += percentage;
+  });
 }
 
 function syncSectionButtons(section, value) {
@@ -1153,6 +1254,7 @@ function applyPageFilter(value) {
     applyContestFilter(section, value);
     syncSectionButtons(section, value);
   });
+  renderTopicPie(value);
 }
 
 document.querySelectorAll("[data-topic-section]").forEach((section) => {
@@ -1176,4 +1278,6 @@ document.querySelectorAll("[data-page-filter]").forEach((button) => {
     applyPageFilter(button.dataset.pageFilter);
   });
 });
+
+renderTopicPie("all");
 </script></body></html>
