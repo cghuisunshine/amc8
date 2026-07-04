@@ -18,7 +18,9 @@ h2{font-size:21px;margin:0}
 .filter-btn:disabled{color:#9ca3af;background:#f3f4f6;cursor:not-allowed}
 .topic-overview{display:flex;align-items:center;gap:18px;margin:18px 0 6px;padding:14px 0;border-bottom:1px solid #e5e7eb}
 .topic-pie{width:132px;height:132px;flex:0 0 auto}
-.topic-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 16px;flex:1;margin:0;padding:0;list-style:none}
+.topic-summary{flex:1;min-width:0}
+.topic-total{font-weight:600;margin-bottom:8px}
+.topic-legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:6px 16px;margin:0;padding:0;list-style:none}
 .topic-legend li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;align-items:center;gap:8px;margin:0;font-size:13px}
 .topic-swatch{width:10px;height:10px;border-radius:2px}
 .topic-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -42,7 +44,10 @@ li.hidden{display:none}
 </div>
 <div class="topic-overview" aria-label="Topic percentage chart">
 <svg class="topic-pie" data-topic-pie viewBox="0 0 120 120" role="img" aria-label="Topic percentages"></svg>
+<div class="topic-summary">
+<div class="topic-total" data-topic-total></div>
 <ul class="topic-legend" data-topic-legend></ul>
+</div>
 </div>
 <section class="topic-section" data-topic-section data-topic="3D Geometry Problems">
 <div class="topic-header">
@@ -1198,12 +1203,14 @@ function describeSlice(cx, cy, radius, startPercent, endPercent) {
 
 function renderTopicPie(value) {
   const pie = document.querySelector("[data-topic-pie]");
+  const totalLabel = document.querySelector("[data-topic-total]");
   const legend = document.querySelector("[data-topic-legend]");
-  if (!pie || !legend) return;
+  if (!pie || !totalLabel || !legend) return;
 
   const distribution = getTopicDistribution(value);
   const total = distribution.reduce((sum, entry) => sum + entry.count, 0);
   pie.replaceChildren();
+  totalLabel.textContent = `Total problems: ${total}`;
   legend.replaceChildren();
 
   if (!total) return;
